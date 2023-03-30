@@ -46,17 +46,26 @@ createApp({
         addTask(){
             console.log('add')
             if (this.newTask.length > 5) {
-                this.toDo.unshift(`
+                this.toDo.unshift(
                 {
-                    text: ${this.newTask},
+                    text: this.newTask,
                     done: false
-                },
-                `)
+                }
+                )
                 this.newTask = ''
                 this.error = null
             }
             else{
                 this.error = 'sorry, you must type at least 5 carachters!'
+            }
+        },
+        invertDone(){
+            console.log('clickato')
+            if (this.toDo.done === true) {
+                
+            }
+            else{
+                this.toDo.done = true
             }
         }
     }
