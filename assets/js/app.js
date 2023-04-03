@@ -59,14 +59,14 @@ createApp({
                 this.error = 'sorry, you must type at least 5 carachters!'
             }
         },
-        invertDone(){
-            console.log('clickato')
-            if (this.toDo.done === true) {
-                
+        invertDone(index, taskDone){
+            console.log('clickato', index)
+            this.toDo.index = taskDone
+           
+            if (taskDone.index === true ) {
+                taskDone.index = false
             }
-            else{
-                this.toDo.done = true
-            }
+          
         }
     }
        
