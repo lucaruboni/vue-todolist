@@ -19,7 +19,6 @@ createApp({
   data() {
     return {
       newTask: '',
-    
       error: null,
       toDo: [
         {
@@ -40,7 +39,7 @@ createApp({
     },
     methods: {
         deleteTask(index){
-            console.log('clickkk')
+            console.log('clickkk', this.toDo.index)
             this.toDo.splice(index, 1)
         },
         addTask(){
@@ -59,13 +58,11 @@ createApp({
                 this.error = 'sorry, you must type at least 5 carachters!'
             }
         },
-        invertDone(index, taskDone){
-            console.log('clickato', index)
-            this.toDo.index = taskDone
-           
-            if (taskDone.index === true ) {
-                taskDone.index = false
-            }
+        invertDone(task){
+            /*console.log('clickato', index)
+            this.toDo[index].done = !taskDone
+            console.log(taskDone, this.toDo[index])*/
+            task.done = !task.done;
           
         }
     }

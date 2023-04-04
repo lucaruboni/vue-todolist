@@ -37,8 +37,8 @@
                     <ul>
                         <li v-for="(task, index) in toDo" v-for="(element, elIndex) in task"  >
                             <div>
-                                <span :class=" task.done === true ? 'text-decoration-line-through' : ''" class="m-3 " @click="invertDone(index, task.done)">{{task.text}}</span>
-                                <span class="d-inline-block ms-3" @click="deleteTask()">
+                                <span :class=" task.done === true ? 'text-decoration-line-through' : ''" class="m-3 " @click="invertDone(task)">{{task.text}}</span>
+                                <span class="d-inline-block ms-3" @click="deleteTask(index)">
                                     <img src="./assets/img/trash3.svg" class="icon_size" alt="">
 
                                 </span>
